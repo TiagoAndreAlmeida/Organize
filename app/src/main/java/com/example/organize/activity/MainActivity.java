@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.organize.R;
+import com.example.organize.activity.config.FirebaseConfig;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
@@ -39,6 +41,21 @@ public class MainActivity extends IntroActivity {
                 .fragment(R.layout.slide_intro)
                 .canGoForward(false)
                 .build());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificaUsuarioLogado();
+    }
+
+    private void verificaUsuarioLogado() {
+        FirebaseAuth firebaseAuth = FirebaseConfig.getFirebaseAuthInstance();
+
+        if(firebaseAuth.getCurrentUser() != null) {
+
+            startActivity(new Intent(this, PrincipalActivity.class));
+        }
     }
 
     public void onEntrar(View view) {
