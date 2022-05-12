@@ -22,13 +22,39 @@
 
     <include layout="@layout/content_principal" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_orientation="portrait"/>
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="16dp"
+            app:efab_orientation="portrait" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onReceita"
+            app:fab_color="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/ic_baseline_add_24"
+            app:fab_orientation="portrait"
+            app:label_text="Adicionar Receita" />
+        <com.nambimobile.widgets.efab.FabOption
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDespesa"
+            app:fab_orientation="portrait"
+            app:fab_icon="@drawable/ic_baseline_add_24"
+            app:label_text="Adicionar Despesa" />
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
