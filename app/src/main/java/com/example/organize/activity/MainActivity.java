@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.organize.R;
 import com.example.organize.activity.config.FirebaseConfig;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
@@ -51,10 +53,12 @@ public class MainActivity extends IntroActivity {
 
     private void verificaUsuarioLogado() {
         FirebaseAuth firebaseAuth = FirebaseConfig.getFirebaseAuthInstance();
+//        DatabaseReference databaseReference = FirebaseConfig.getDatabaseReference();
 
+//        Log.i("DEBUG", firebaseAuth.getUid());
         if(firebaseAuth.getCurrentUser() != null) {
-
-            startActivity(new Intent(this, PrincipalActivity.class));
+firebaseAuth.signOut();
+//            startActivity(new Intent(this, PrincipalActivity.class));
         }
     }
 
