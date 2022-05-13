@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_cadastro.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/activity_despesa.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_principal.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/activity_receita.xml" value="0.1875" />
