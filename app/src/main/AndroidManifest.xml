@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Organize">
         <activity
+            android:theme="@style/despesaTheme"
             android:name=".activity.DespesaActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/receitaTheme"
             android:name=".activity.ReceitaActivity"
             android:exported="false" />
         <activity

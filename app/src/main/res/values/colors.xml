@@ -3,6 +3,15 @@
     <color name="colorPrimary">#01C7D2</color>
     <color name="colorPrimaryDark">#00B2BC</color>
     <color name="colorAccent">#FF706A</color>
+
+    <color name="colorPrimaryDespesa">#FF706A</color>
+    <color name="colorPrimaryDarkDespesa">#E66560</color>
+    <color name="colorAccentDespesa">#FF706A</color>
+
+    <color name="colorPrimaryReceita">#00D39E</color>
+    <color name="colorPrimaryDarkReceita">#00BE8B</color>
+    <color name="colorAccentReceita">#00D39E</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#3F51B5</color>
     <color name="purple_700">#303F9F</color>
