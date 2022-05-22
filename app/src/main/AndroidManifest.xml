@@ -12,12 +12,7 @@
         <activity
             android:screenOrientation="portrait"
             android:theme="@style/despesaTheme"
-            android:name=".activity.DespesaActivity"
-            android:exported="false" />
-        <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/receitaTheme"
-            android:name=".activity.ReceitaActivity"
+            android:name=".activity.MovimentacaoActivity"
             android:exported="false" />
         <activity
             android:screenOrientation="portrait"

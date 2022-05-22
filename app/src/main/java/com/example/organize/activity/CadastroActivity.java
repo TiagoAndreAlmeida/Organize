@@ -63,8 +63,6 @@ public class CadastroActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             String UUID = task.getResult().getUser().getUid();
                             usuario.setUUDI(UUID);
-                            usuario.setDespesaTotal(0.0);
-                            usuario.setReceitaTotal(0.0);
                             usuario.salvar();
                             Toast.makeText(getApplicationContext(), "Usuário cadastrado", Toast.LENGTH_LONG).show();
                             finish();

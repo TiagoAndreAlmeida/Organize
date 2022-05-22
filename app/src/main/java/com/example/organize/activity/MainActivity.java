@@ -55,10 +55,9 @@ public class MainActivity extends IntroActivity {
         FirebaseAuth firebaseAuth = FirebaseConfig.getFirebaseAuthInstance();
 //        DatabaseReference databaseReference = FirebaseConfig.getDatabaseReference();
 
-//        Log.i("DEBUG", firebaseAuth.getUid());
         if(firebaseAuth.getCurrentUser() != null) {
-firebaseAuth.signOut();
-//            startActivity(new Intent(this, PrincipalActivity.class));
+//            firebaseAuth.signOut();
+            startActivity(new Intent(this, PrincipalActivity.class));
         }
     }
 

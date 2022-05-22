@@ -3,11 +3,9 @@ package com.example.organize.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.organize.databinding.ActivityPrincipalBinding;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -17,6 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 
 
 import com.example.organize.R;
+import com.example.organize.databinding.ActivityPrincipalBinding;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -52,11 +51,11 @@ public class PrincipalActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void onReceita(View view) {
-        startActivity(new Intent(this, ReceitaActivity.class));
-    }
+    public void onMovimentacao(View view) {
+        String tag = view.getTag().toString();
 
-    public void onDespesa(View view) {
-        startActivity(new Intent(this, DespesaActivity.class));
+        Intent intent = new Intent(this, MovimentacaoActivity.class);
+        intent.putExtra("tipo", tag);
+        startActivity(intent);
     }
 }

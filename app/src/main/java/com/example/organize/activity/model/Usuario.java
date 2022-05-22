@@ -8,7 +8,7 @@ import com.google.firebase.database.Exclude;
 
 public class Usuario {
     private String UUDI, nome, email, senha;
-    private Double despesaTotal, receitaTotal = 0.0;
+    private Double despesaTotal= 0.0, receitaTotal = 0.0;
 
     public Usuario() {}
 
